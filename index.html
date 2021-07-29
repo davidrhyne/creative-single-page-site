@@ -9,26 +9,35 @@
   <title>Frontend Mentor | Creative single page site</title>
 </head>
 <body>
-  About
-  Service
-  Projects
 
-  Schedule a call
+  <header>
+    <img class="header__logo" src="./dist/images/desktop/logo.svg" alt="">
+    <button class="nav-toggle" id="nav-toggle" aria-label="toggle navigation">
+      <span class="hamburger" id="hamburger"></span>
+    </button>
 
-  Branding & website design agency
+    <nav id="nav">
+      <ul>
+        <li class="menu-item"><a href="#about">About</a></li> 
+        <li class="menu-item"><a href="#service">Services</a></li>
+        <li class="menu-item"><a href="#products">Projects</a></li>
+        <li class="menu-item"><a href="#contact">Schedule A Call</a></li>
+      </ul>
+    </nav>
+    <!-- <h1 class="header__title" id="header__title">Creative</h1> -->
 
-  We specialize in visual storytelling by creating cohesive brand and website design 
-  solutions for small businesses, giving lasting impressions to audiences in a digital world.
-
-  Learn more
-
-  Design is strategic.
-
-  A well-crafted design strategy consistently produces desired outcomes and brand awareness. 
-  We are firm believers that success lies in creative collaboration with our clients.
-
-  Schedule a call
-
+  </header>
+  <section class="branding" id="about">
+    <h1 class="branding__titel">Branding & website design agency</h1>
+    <p class="branding__statement">We specialize in visual storytelling by creating cohesive brand and website design   solutions for small businesses, giving lasting impressions to audiences in a digital world.</p>
+    <button class="branding__button">Learn More</button>
+  </section>
+  <section class="design" id="design">
+    <h2 class="design__title"><span class="design__title--accent">Design</span> is strategic.</h1>
+    <p class="design__statement">A well-crafted design strategy consistently produces desired outcomes and brand awareness. We are firm believers that success lies in creative collaboration with our clients.</p>
+    <button class="design__button">Schedule a Call</button>
+  </section>
+  
   Our approach for creating a winning brand
 
   01 Brand strategy
