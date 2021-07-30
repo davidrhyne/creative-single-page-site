@@ -19,53 +19,107 @@
     <nav id="nav">
       <ul>
         <li class="menu-item"><a href="#about">About</a></li> 
-        <li class="menu-item"><a href="#service">Services</a></li>
-        <li class="menu-item"><a href="#products">Projects</a></li>
-        <li class="menu-item"><a href="#contact">Schedule A Call</a></li>
+        <li class="menu-item"><a href="#services">Services</a></li>
+        <li class="menu-item"><a href="#projects">Projects</a></li>
+        <li class="menu-item"><a href="#">Schedule A Call</a></li>
       </ul>
     </nav>
     <!-- <h1 class="header__title" id="header__title">Creative</h1> -->
 
   </header>
   <section class="branding" id="about">
-    <h1 class="branding__titel">Branding & website design agency</h1>
+    <picture>
+      <source srcset="./dist/images/desktop/image-hero.jpg" media="(min-width: 750px)">
+      <img class="about__image  about__image--two" src="./dist/images/mobile/image-hero.jpg"
+        alt="two persons working at their desks">
+    </picture>
+    <h1 class="branding__title">Branding & website design agency</h1>
     <p class="branding__statement">We specialize in visual storytelling by creating cohesive brand and website design   solutions for small businesses, giving lasting impressions to audiences in a digital world.</p>
     <button class="branding__button">Learn More</button>
   </section>
   <section class="design" id="design">
+    <picture>
+      <source srcset="./dist/images/desktop/image-strategic.jpg" media="(min-width: 750px)">
+      <img class="design__image  design__image" src="./dist/images/mobile/image-strategic.jpg"
+        alt="person working with laptop and notepad">
+    </picture>
+    <div class="design__bg-element">put red wavy line here</div>
     <h2 class="design__title"><span class="design__title--accent">Design</span> is strategic.</h1>
     <p class="design__statement">A well-crafted design strategy consistently produces desired outcomes and brand awareness. We are firm believers that success lies in creative collaboration with our clients.</p>
     <button class="design__button">Schedule a Call</button>
   </section>
-  
-  Our approach for creating a winning brand
+  <section class="services" id="services">
+    <h2 class="services__title">Our approach for creating a winning brand</h2>
+    <div class="service">
+      <div class="service__number">01</div>
+      <h3 class="service__title">Brand Strategy</h3>
+      <p class="service__description">Brand strategy is critical for long-term success. Outshining competitors and capturing the target audience are key.</p>
+    </div>
+    <div class="service">
+      <div class="service__number">02</div>
+      <h3 class="service__title">Brand Design</h3>
+      <p class="service__description">Keeping the brand design unique and meaningful helps in communicating the brand’s timeless value effectively..</p>
+    </div>
+    <div class="service">
+      <div class="service__number">03</div>
+      <h3 class="service__title">Web Design</h3>
+      <p class="service__description">A beautifully crafted website is the best tool for brand awareness, and ultimately results in increased revenue</p>
+    </div>
+  </section>
+  <section class="projects" id="projects">
+    <div class="projects__carousel">
+      <div class="project__carousel-item">
+        <picture>
+          <source srcset="./dist/images/desktop/image-slide-1.jpg" media="(min-width: 750px)">
+          <img class="design__image  design__image" src="./dist/images/mobile/image-slide-1.jpg"
+            alt="book open to page on Minimum Desirable Product">
+        </picture>
+        <p class="product__carousel-item-description">Lean Product Roadmap</p>
+        <p class="product__carousel-item-date">2019 Project</p>
 
-  01 Brand strategy
-  Brand strategy is critical for long-term success. Outshining competitors and capturing 
-  the target audience are key.
+      </div>
+      <div class="project__carousel-item">
+        <picture>
+          <source srcset="./dist/images/desktop/image-slide-2.jpg" media="(min-width: 750px)">
+          <img class="design__image  design__image" src="./dist/images/mobile/image-slide-2.jpg"
+            alt="black canvas bag with New Majestic Hotel branding">
+        </picture>
+        <p class="product__carousel-item-description">New Majestic Hotel </p>
+        <p class="product__carousel-item-date">2018 Project</p>
+        
+        <div class="project__carousel-item">
+          <picture>
+            <source srcset="./dist/images/desktop/image-slide-3.jpg" media="(min-width: 750px)">
+            <img class="design__image  design__image" src="./dist/images/mobile/image-slide-3.jpg"
+              alt="computer screen with financial transaction">
+          </picture>
+          <p class="product__carousel-item-description">Crypto Dashboard</p>
+          <p class="product__carousel-item-date">2016 Project</p>
 
-  02 Brand design
-  Keeping the brand design unique and meaningful helps in communicating the brand’s timeless 
-  value effectively.
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="project__carousel-nav" >
+    <h2 class="product__carousel-item-title">Brand naming & guidelines</h2>
+    <h2 class="product__carousel-item-title">Brand identity & merchandise</h2>
+    <h2 class="product__carousel-item-title">Brand identity & web design</h2>
+    <button class="project__carousel-nav-button-next">
+      <img src="./dist/images/desktop/icon-arrow-previous.svg" alt="previous" class="project__carousel-nav-button-previous-logo">
+    </button>
+    <button class="project__carousel-nav-button-previous">
+      <img src="./dist/images/desktop/icon-arrow-next.svg" alt="next" class="project__carousel-nav-button-next-logo">
+    </button>
+  </section>
+  <section class="cta" id="cta">
+    <h2 class="cta__title">Let's build something great together.</h1>
+    <button class="cta__button">Schedule a Call</button>
+  </section>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    <span>Coded with ❤️ by <a href="mailto:rhynedavid16@gmail.com">David</a>.</span>
+  </div>
+  <script src="./dist/src/creative.js"></script>
 
-  03 Web design
-  A beautifully crafted website is the best tool for brand awareness, and ultimately results 
-  in increased revenues.
-
-  Brand naming & guidelines
-  Lean Product Roadmap 
-  2019 project
-
-  Brand identity & merchandise
-  New Majestic Hotel 
-  2018 Project
-  
-  Brand identity & web design
-  Crypto Dashboard
-  2016 Project
-
-  Let's build something great together.
-
-  Schedule a Call
 </body>
 </html>
