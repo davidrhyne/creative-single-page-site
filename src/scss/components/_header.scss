@@ -1,0 +1,212 @@
+@use '../abstracts/index' as *;
+@use '../base/index' as *;
+
+// heading styles
+header {
+    padding: 2.5em 1.5em;
+    // background-image: url('../images/mobile/image-header.jpg');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: 50% 75%;
+    // height: 538px;
+    position: relative;
+    
+    // media queries
+    @include mq($menu-break) {
+        padding: 2em;
+    }
+
+    // @include mq($tablet-break) {
+    //     background-image: url('../images/desktop/image-header.jpg');
+    //     height: 700px;
+    //     width: auto;
+    //     margin: 0 auto;
+    // }
+
+    @include mq($desktop-break) {
+        height: 800px;
+       
+    }
+}
+
+.header__logo {
+    height: 30px;
+    width: auto;
+
+}
+
+.hide {
+    display: none;
+
+    @include mq($menu-break) {
+        display: block;
+    }
+}
+
+.adjust-height {
+    height: 1px;
+}
+
+nav {
+    // for the shape of the menu container    
+    // clip-path: polygon(0 9%, 92% 9%, 100% 0, 100% 100%, 0 100%);
+    background: $primary-bg-black;    
+    height: 329px;
+    width: 85%;
+    max-width: 400px;
+    margin: 1em 0 0 auto;
+    position: relative;
+
+    // @include mq($menu-break) {
+    //     clip-path: unset;
+    //     background:transparent;
+    //     height: unset;
+    //     margin: 0;
+    //     top: 0;
+    //     right: 0;
+    //     max-width: 425px;
+    //     position: absolute;
+    // }
+    
+    // @include mq($desktop-break) {
+    //     max-width: 550px;        
+    // }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: absolute;
+        list-style: none;
+        width: 100%;
+        top: 9%;
+        height: 91%;
+        padding: 2em 0;
+
+        @include mq($menu-break) {
+            padding: 1.2em 1em 2em 0;
+            position: unset;
+            justify-content: end;
+            flex-direction: row;
+            height: 100px;
+            z-index: 9;
+        }
+    }
+
+    li {
+        text-align: center;
+        padding: .75em;
+        min-width: 40%;
+        margin: 0 auto;
+        border-radius: 50px;
+       
+        &:hover {
+            font-family: ff(fraunces);
+            //background: $primary-yellow;  
+            
+            @include mq($menu-break) {
+                //background: $primary-light-blue;
+            }
+        }
+
+        @include mq($menu-break){
+            padding: .75em 1em 2em;
+            min-width: unset;
+            margin: 0;            
+        }
+
+        @include mq($desktop-break){
+            padding: .75em 1.75em 2em;   
+        }        
+    }
+
+    a {
+        text-decoration: none;
+        color: $primary-white; 
+        padding: 1.5em;
+        
+        &:hover {
+            background-color: $primary-red;
+
+            @include mq($menu-break){
+                //color: $white;
+            }
+        }
+
+        @include mq($menu-break) {
+            //color: $white;            
+            font-size: 1.125rem;
+        }
+    }
+}
+
+.nav-toggle {
+    padding: 2em .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+
+    @include mq($menu-break) {
+
+        display: none;
+    };
+}
+
+// 
+.nav-open {
+    
+    .nav {
+        transform: translateX(0);
+    }
+
+    .nav-toggle {
+        position: fixed;
+    }
+
+    .hamburger {
+        transform: rotate(.625turn);
+
+        &::before {
+            transform: rotate(90deg) translateX(-8px);
+        }
+
+        &::after {
+            opacity: 0;
+        }
+    }
+}
+
+// hamburger styling
+
+.hamburger {
+    display: block;
+    position: relative;
+    margin-top: 1em;
+    height: 2px;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background: $primary-hamburger;
+    width: 2em;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: inherit;
+}
+
+.hamburger::before { top: 8px; }
+.hamburger::after { bottom: 8px; }

@@ -1,0 +1,64 @@
+@use '../abstracts/fonts' as *;
+@use '../abstracts/functions' as *;
+@use '../abstracts/mixins' as *;
+
+body {
+    font-family: ff(primary);
+    font-size: 0.9375rem;
+    font-weight: fw(regular);
+}
+
+h1, 
+h2, 
+h3 {
+    margin: 0;
+    font-weight: fw(extraBold);
+}
+
+h1 {
+    font-size: 2.5rem;
+
+    @include mq($menu-break) {
+        font-size: 3.5rem;
+    }
+
+    @include mq($desktop-break) {
+        font-size: 5rem;  
+    }
+}
+
+h2 {
+    font-size: 2rem;
+
+    @include mq($desktop-break) {
+        font-size: 3.5rem;
+    }
+}
+
+h3 {
+
+    @include mq($desktop-break) {
+        font-size: 1.25rem;  
+    }
+}
+
+p {
+    line-height: 1.6;
+
+    @include mq($desktop-break) {
+        font-size: 1.125rem;  
+    }
+}
+
+a {
+    font-size: 1.125rem;
+
+    &:hover {
+        font-size: 1rem;
+        font-weight: fw(extraBold);
+    }
+}
+
+.service__number {
+    font-size: 5rem;
+}

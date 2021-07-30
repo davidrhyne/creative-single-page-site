@@ -1,0 +1,7 @@
+@use './abstracts/index' as *;
+@use './base/typography' as *;
+@use './components/index' as *;
+
+html {
+    scroll-behavior: smooth;
+}
