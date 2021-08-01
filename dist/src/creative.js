@@ -14,7 +14,7 @@ function handleMenuClick() {
     // hide these elements while the menu is open
     nav.classList.toggle('hide')
     headerTitle.classList.toggle('hide')
-    headerArrow.classList.toggle('hide')
+    // headerArrow.classList.toggle('hide')
     // toggle isMenuOpen to true
     isMenuOpen = !isMenuOpen;
     // adjust the height of the hamburger

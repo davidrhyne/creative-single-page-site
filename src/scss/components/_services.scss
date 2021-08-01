@@ -1,0 +1,26 @@
+@use '../abstracts/index' as *;
+@use '../base/index' as *;
+
+.services {
+    background-color: $primary-red;
+    color: $primary-white;
+    padding: 6em 1.5em;
+
+    h2 {
+        padding-bottom: 1em;
+    }
+    
+    .service__number {
+        position: absolute;
+    }
+
+    h3 {
+        font-size: .9375rem;
+        padding: 3.5em 1.25em 1.5em;
+    }
+
+    p {
+        padding: 0 1.25em 2em;
+    }
+}
+

@@ -1,0 +1,52 @@
+@use '../abstracts/index' as *;
+@use '../base/index' as *;
+
+.design {
+    //border: 1px dodgerblue solid;
+    //padding: 1em;
+    background-color: $primary-bg-black;
+    color: $primary-white;
+    //position: relative;
+    margin-bottom: .5em;
+
+    div {
+        padding: 2em 2em 5em;       
+        
+    }
+
+    h2 span {
+        color: $primary-red;
+    }
+
+    p {
+        padding: 2em 0;
+        //border: 1px solid black;
+    }
+
+    button {
+        font-size: 0.9375rem;
+        background-color: $primary-bg-black;
+        color: $primary-red;
+        border: none;
+        border-bottom: 2px solid $primary-red;
+        padding: 0 0 .5em;
+
+    }
+}
+
+.design__image {
+    width: 100%;
+    height: auto;
+}
+
+.design__bg-element {
+    width: 63px;
+    height: auto;
+    position: relative;
+    top: -18px;
+    left: 30px;
+    z-index: 10;
+}
+
+
+

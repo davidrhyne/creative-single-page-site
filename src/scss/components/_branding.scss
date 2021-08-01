@@ -1,0 +1,29 @@
+@use '../abstracts/index' as *;
+@use '../base/index' as *;
+
+.branding {
+    //border: 1px dodgerblue solid;
+    //padding: 1em;
+
+
+    div {
+        padding: 3em 2em 7em;
+    }
+
+    p {
+        padding: 2.5em 0;
+        //border: 1px solid black;
+    }
+
+    button {
+        background-color: $primary-red;
+        color: $primary-white;
+        padding: 1em 2em;
+    }
+}
+
+.branding__image {
+    width: 100%;
+    height: auto;
+    // padding: unset;
+}
