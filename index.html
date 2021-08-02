@@ -75,46 +75,55 @@
   </section>
   <section class="projects" id="projects">
     <div class="projects__carousel">
-      <div class="project__carousel-item">
+      <!-- project item start -->
+      <div class="project__carousel-item project__carousel-item--visible">
         <picture>
           <source srcset="./dist/images/desktop/image-slide-1.jpg" media="(min-width: 750px)">
           <img class="design__image  design__image" src="./dist/images/mobile/image-slide-1.jpg"
             alt="book open to page on Minimum Desirable Product">
         </picture>
-        <p class="product__carousel-item-description">Lean Product Roadmap</p>
-        <p class="product__carousel-item-date">2019 Project</p>
-
+        <div class="product__carousel-item-description">
+          <p class="product__carousel-item-description-title">Lean Product Roadmap</p>
+          <p class="product__carousel-item-description-date">2019 Project</p>
+        </div>
       </div>
+      <!-- project item end -->
+      <!-- project item start -->
       <div class="project__carousel-item">
         <picture>
           <source srcset="./dist/images/desktop/image-slide-2.jpg" media="(min-width: 750px)">
           <img class="design__image  design__image" src="./dist/images/mobile/image-slide-2.jpg"
             alt="black canvas bag with New Majestic Hotel branding">
         </picture>
-        <p class="product__carousel-item-description">New Majestic Hotel </p>
-        <p class="product__carousel-item-date">2018 Project</p>
-        
-        <div class="project__carousel-item">
-          <picture>
-            <source srcset="./dist/images/desktop/image-slide-3.jpg" media="(min-width: 750px)">
-            <img class="design__image  design__image" src="./dist/images/mobile/image-slide-3.jpg"
-              alt="computer screen with financial transaction">
-          </picture>
-          <p class="product__carousel-item-description">Crypto Dashboard</p>
-          <p class="product__carousel-item-date">2016 Project</p>
-
+        <div class="product__carousel-item-description">
+          <p class="product__carousel-item-description-title">New Majestic Hotel </p>
+          <p class="product__carousel-item-description-date">2018 Project</p>   
         </div>
       </div>
+      <!-- project item end -->
+      <!-- project item start -->
+      <div class="project__carousel-item">
+        <picture>
+          <source srcset="./dist/images/desktop/image-slide-3.jpg" media="(min-width: 750px)">
+          <img class="design__image  design__image" src="./dist/images/mobile/image-slide-3.jpg"
+            alt="computer screen with financial transaction">
+        </picture>
+        <div class="product__carousel-item-description">
+          <p class="product__carousel-item-description-title">Crypto Dashboard</p>
+          <p class="product__carousel-item-description-date">2016 Project</p>
+        </div>
+      </div>
+      <!-- project item end -->
     </div>
   </section>
   <section class="project__carousel-nav" >
-    <h2 class="product__carousel-item-title">Brand naming & guidelines</h2>
+    <h2 class="product__carousel-item-title product__carousel-item-title--visible">Brand naming & guidelines</h2>
     <h2 class="product__carousel-item-title">Brand identity & merchandise</h2>
     <h2 class="product__carousel-item-title">Brand identity & web design</h2>
-    <button class="project__carousel-nav-button-next">
+    <button class="project__carousel-nav-button-previous" id="project__carousel-nav-button-previous">
       <img src="./dist/images/desktop/icon-arrow-previous.svg" alt="previous" class="project__carousel-nav-button-previous-logo">
     </button>
-    <button class="project__carousel-nav-button-previous">
+    <button class="project__carousel-nav-button-next" id="project__carousel-nav-button-next">
       <img src="./dist/images/desktop/icon-arrow-next.svg" alt="next" class="project__carousel-nav-button-next-logo">
     </button>
   </section>

@@ -1,0 +1,16 @@
+@use '../abstracts/index' as *;
+@use '../base/index' as *;
+
+.cta {
+
+    padding: 6em 1em;
+
+    h2 {
+        margin: 0 0 1.5em;
+    }
+    button {
+        background-color: $primary-red;
+        color: $primary-white;
+        padding: 1em 2em;
+    }
+}
