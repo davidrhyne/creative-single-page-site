@@ -12,7 +12,8 @@
 .projects__carousel {
     
     position:relative;
-    //display:inline-block;
+    // display:inline-block;
+    // border: solid 1px red;
 
 
 
@@ -28,12 +29,6 @@
         //display: inline-block;
     }
 
-
-    // img {
-    //     z-index: -1;
-    //     position: relative;
-    //     display: block;
-    // }
     .project__carousel-item,    
     .project__carousel-item--hidden,
     .product__carousel-item-title,
@@ -76,10 +71,14 @@
     padding: 4.5em 2em 3em;
     background: $primary-bg-black;
     color: $primary-white;
+    margin-top: -4px;
+    //z-index: 9999;
+    
     .product__carousel-item-title,
     .product__carousel-item-title--hidden {
         display: none;
     }
+
 
 
     .product__carousel-item-title--visible {
