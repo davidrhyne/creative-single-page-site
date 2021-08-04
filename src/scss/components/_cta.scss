@@ -2,8 +2,9 @@
 @use '../base/index' as *;
 
 .cta {
+    border: 1px solid dodgerblue;
 
-    padding: 6em 1em;
+    padding: 6em 1.5em;
 
     h2 {
         margin: 0 0 1.5em;
@@ -12,5 +13,26 @@
         background-color: $primary-red;
         color: $primary-white;
         padding: 1.25em 2em;
+    }
+
+    .cta__bg-element {
+        display: none;
+    }
+
+    @include mq($menu-break) {
+        display: flex;
+        justify-content: space-between;
+        padding: 5em 3em;
+        h2 {
+            max-width: 50%;
+            margin: 0;
+        }
+
+        button {
+            //padding: 0;
+            font-size: 1rem;
+            //padding: 0 2em;
+            height: 4rem;
+        }
     }
 }

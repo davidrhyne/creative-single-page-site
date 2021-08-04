@@ -31,7 +31,7 @@
   </header>
   <section class="branding" id="about">
     <picture class="picture">
-      <source srcset="./dist/images/desktop/image-hero.jpg" media="(min-width: 1000px)">
+      <source srcset="./dist/images/desktop/image-hero.jpg" media="(min-width: 1200px)">
       <source srcset="./dist/images/tablet/image-hero.jpg" media="(min-width: 750px)">
       <img class="branding__image" src="./dist/images/mobile/image-hero.jpg"
         alt="two persons working at their desks">
@@ -61,6 +61,7 @@
     <!-- <div class="services" id="services"> -->
       <h2 class="services__title">Our approach for creating a winning brand</h2>
       <!-- <div class="services__container"> -->
+        <div class="service serviceX" ></div>
         <div class="service service1">
           <div class="service__number">01</div>
           <h3 class="service__title">Brand Strategy</h3>
@@ -79,12 +80,14 @@
       <!-- </div> -->
     <!-- </div> -->
   </div>
-  <section class="projects" id="projects">
+  <!-- <section class="projects" id="projects"> -->
+  <div class="projects__grid">
     <div class="projects__carousel">
       <!-- project item start -->
       <div class="project__carousel-item project__carousel-item--visible">
         <picture>
-          <source srcset="./dist/images/desktop/image-slide-1.jpg" media="(min-width: 750px)">
+          <source srcset="./dist/images/desktop/image-slide-1.jpg" media="(min-width: 1000px)">
+          <source srcset="./dist/images/tablet/image-slide-1.jpg" media="(min-width: 750px)">
           <img class="design__image  design__image" src="./dist/images/mobile/image-slide-1.jpg"
             alt="book open to page on Minimum Desirable Product">
         </picture>
@@ -97,7 +100,8 @@
       <!-- project item start -->
       <div class="project__carousel-item">
         <picture>
-          <source srcset="./dist/images/desktop/image-slide-2.jpg" media="(min-width: 750px)">
+          <source srcset="./dist/images/desktop/image-slide-2.jpg" media="(min-width: 1000px)">          
+          <source srcset="./dist/images/tablet/image-slide-2.jpg" media="(min-width: 750px)">
           <img class="design__image  design__image" src="./dist/images/mobile/image-slide-2.jpg"
             alt="black canvas bag with New Majestic Hotel branding">
         </picture>
@@ -110,7 +114,8 @@
       <!-- project item start -->
       <div class="project__carousel-item">
         <picture>
-          <source srcset="./dist/images/desktop/image-slide-3.jpg" media="(min-width: 750px)">
+          <source srcset="./dist/images/desktop/image-slide-3.jpg" media="(min-width: 1000px)">          
+          <source srcset="./dist/images/tablet/image-slide-3.jpg" media="(min-width: 750px)">
           <img class="design__image  design__image" src="./dist/images/mobile/image-slide-3.jpg"
             alt="computer screen with financial transaction">
         </picture>
@@ -121,8 +126,8 @@
       </div>
       <!-- project item end -->
     </div>
-  </section>
-  <section class="project__carousel-nav" >
+  <!-- </section> -->
+  <section class="project__carousel-nav" > 
     <h2 class="product__carousel-item-title product__carousel-item-title--visible">Brand naming & guidelines</h2>
     <h2 class="product__carousel-item-title">Brand identity & merchandise</h2>
     <h2 class="product__carousel-item-title">Brand identity & web design</h2>
@@ -132,8 +137,12 @@
     <button class="project__carousel-nav-button-next" id="project__carousel-nav-button-next">
       <img src="./dist/images/desktop/icon-arrow-next.svg" alt="next" class="project__carousel-nav-button-next-logo">
     </button>
+    <img class="product__bg-element" src="./dist/images/desktop/bg-pattern-wavy-white.svg" alt=""/>  
   </section>
+  </div>
+
   <section class="cta" id="cta">
+    <img class="cta__bg-element" src="./dist/images/desktop/bg-pattern-wave-red.svg" alt=""/>  
     <h2 class="cta__title">Let's build something great together.</h1>
     <button class="cta__button">Schedule a Call</button>
   </section>

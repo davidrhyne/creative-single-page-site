@@ -1,24 +1,24 @@
 @use '../abstracts/index' as *;
 @use '../base/index' as *;
 
-.design {
+.design__container {
 
     background-color: $primary-bg-black;
     color: $primary-white;
     margin-bottom: .5em;
-
-    div {
-        padding: 2em 2em 5em;       
-        
-    }
+    padding: 5em 2em 5em;   
+    //border: 2px solid orange;
+    margin-top: -35px;
 
     h2 span {
         color: $primary-red;
     }
 
     p {
-        padding: 2em 0;
-        border: 1px solid white;
+        padding: 2em 0 1em;
+        //border: 1px solid white;
+        max-width: 400px;
+        //margin: 0 auto;
     }
 
     button {
@@ -87,13 +87,15 @@
 }
 
 .design__image {
-    border: 1px solid limegreen;
+    //border: 1px solid limegreen;
     width: 100%;
     height: auto;
+    
 }
 
 .design__bg-element {
-    border: 1px solid dodgerblue;
+    //border: 1px solid dodgerblue;
+    
     width: 63px;
     height: auto;
     position: relative;

@@ -1,27 +1,36 @@
 @use '../abstracts/index' as *;
 @use '../base/index' as *;
 
-.services {
+
+
+.services__title {
+    
     background-color: $primary-red;
     color: $primary-white;
-    padding: 6em 1.5em;
+    padding: 3em 1.5rem 1.5em;
 
-    h2 {
-        padding-bottom: 1em;
-    }
-    
-    .service__number {
-        position: absolute;
-    }
+}
 
+.service {
+    background-color: $primary-red;
+    color: $primary-white;
+    padding-left: 1.5rem;
+ 
     h3 {
         font-size: .9375rem;
         padding: 3.5em 1.25em 1.5em;
+    
+    }
+  
+    .service__number {
+        position: absolute;
     }
 
     p {
         padding: 0 1.25em 2em;
     }
+
+
 
     @include mq($menu-break) {
     //     display: grid;
@@ -48,3 +57,6 @@
     }
 }
 
+.service3 {
+    padding-bottom: 5em;
+}

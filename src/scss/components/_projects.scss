@@ -4,9 +4,6 @@
 .projects {
     //border: 1px dodgerblue solid;
     //padding: 1em;
-
-
-
 }
 
 .projects__carousel {
@@ -14,8 +11,6 @@
     position:relative;
     // display:inline-block;
     // border: solid 1px red;
-
-
 
     &:after {
         content: "";
@@ -79,8 +74,6 @@
         display: none;
     }
 
-
-
     .product__carousel-item-title--visible {
         display: block;
     }
@@ -98,6 +91,19 @@
 .project__image {
     width: 100%;
     height: auto;
+    
 
     // padding: unset;
+}
+
+.product__bg-element {
+    //background: black;
+    //border: 1px solid red;
+    display: none;
+    width: 63px;
+    height: auto;
+    // position: relative;
+    // top: -18px;
+    // left: 30px;
+    // z-index: 10;
 }
