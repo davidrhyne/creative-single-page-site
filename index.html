@@ -33,48 +33,52 @@
     <picture class="picture">
       <source srcset="./dist/images/desktop/image-hero.jpg" media="(min-width: 1000px)">
       <source srcset="./dist/images/tablet/image-hero.jpg" media="(min-width: 750px)">
-
       <img class="branding__image" src="./dist/images/mobile/image-hero.jpg"
         alt="two persons working at their desks">
     </picture>
     <!-- <div>   -->
       <h1 class="branding__title">Branding & website design agency</h1>
-      <p class="branding__statement">We specialize in visual storytelling by creating cohesive brand and website design   solutions for small businesses, giving lasting impressions to audiences in a digital world.</p>
+      <p class="branding__statement">We specialize in visual storytelling by creating cohesive brand and website design solutions for small businesses, giving lasting impressions to audiences in a digital world.</p>
       <button class="branding__button">Learn More</button>
     <!-- </div> -->
   </section>
-  <section class="design" id="design">
-    <picture>
-      <source srcset="./dist/images/desktop/image-strategic.jpg" media="(min-width: 750px)">
+  <div class="grid__layout">
+    <!-- <div class="design" id="design"> -->
+      <picture class="design__picture">
+        <source srcset="./dist/images/desktop/image-strategic.jpg" media="(min-width: 1000px)">
+        <source srcset="./dist/images/tablet/image-strategic.jpg" media="(min-width: 750px)">
+        <img class="design__image" src="./dist/images/mobile/image-strategic.jpg"
+        alt="person working with laptop and notepad">
+      </picture>
 
-    </picture>
-    <img class="design__image" src="./dist/images/mobile/image-strategic.jpg"
-    alt="person working with laptop and notepad">
-    <img class="design__bg-element" src="./dist/images/desktop/bg-pattern-wave-red.svg" alt=""/>  
-    <div>
-      <h2 class="design__title"><span class="design__title--accent">Design</span> is strategic.</h1>
-      <p class="design__statement">"A well-crafted design strategy consistently produces desired outcomes and brand awareness. We are firm believers that success lies in creative collaboration with our clients."</p>
-      <button class="design__button">Schedule a Call</button>
-    </div>
-  </section>
-  <section class="services" id="services">
-    <h2 class="services__title">Our approach for creating a winning brand</h2>
-    <div class="service">
-      <div class="service__number">01</div>
-      <h3 class="service__title">Brand Strategy</h3>
-      <p class="service__description">Brand strategy is critical for long-term success. Outshining competitors and capturing the target audience are key.</p>
-    </div>
-    <div class="service">
-      <div class="service__number">02</div>
-      <h3 class="service__title">Brand Design</h3>
-      <p class="service__description">Keeping the brand design unique and meaningful helps in communicating the brand’s timeless value effectively..</p>
-    </div>
-    <div class="service">
-      <div class="service__number">03</div>
-      <h3 class="service__title">Web Design</h3>
-      <p class="service__description">A beautifully crafted website is the best tool for brand awareness, and ultimately results in increased revenue</p>
-    </div>
-  </section>
+      <img class="design__bg-element" src="./dist/images/desktop/bg-pattern-wave-red.svg" alt=""/>  
+      <div class="design__container">
+        <h2 class="design__title"><span class="design__title--accent">Design</span> is strategic.</h1>
+        <p class="design__statement">"A well-crafted design strategy consistently produces desired outcomes and brand awareness. We are firm believers that success lies in creative collaboration with our clients."</p>
+        <button class="design__button">Schedule a Call</button>
+      </div>
+    <!-- </div> -->
+    <!-- <div class="services" id="services"> -->
+      <h2 class="services__title">Our approach for creating a winning brand</h2>
+      <!-- <div class="services__container"> -->
+        <div class="service service1">
+          <div class="service__number">01</div>
+          <h3 class="service__title">Brand Strategy</h3>
+          <p class="service__description">Brand strategy is critical for long-term success. Outshining competitors and capturing the target audience are key.</p>
+        </div>
+        <div class="service service2">
+          <div class="service__number">02</div>
+          <h3 class="service__title">Brand Design</h3>
+          <p class="service__description">Keeping the brand design unique and meaningful helps in communicating the brand’s timeless value effectively..</p>
+        </div>
+        <div class="service service3">
+          <div class="service__number">03</div>
+          <h3 class="service__title">Web Design</h3>
+          <p class="service__description">A beautifully crafted website is the best tool for brand awareness, and ultimately results in increased revenue</p>
+        </div>
+      <!-- </div> -->
+    <!-- </div> -->
+  </div>
   <section class="projects" id="projects">
     <div class="projects__carousel">
       <!-- project item start -->

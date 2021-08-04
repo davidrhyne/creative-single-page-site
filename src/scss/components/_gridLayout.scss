@@ -1,0 +1,106 @@
+@use '../abstracts/index' as *;
+@use '../base/index' as *;
+
+.grid__layout {
+    border: 5px purple solid;
+
+    @include mq($menu-break) {
+        
+        display: grid;
+        //grid-template-columns: minmax(300px,1fr) 1fr 1fr;
+        //grid-template-rows: 245px 125px minmax(225px,1fr);
+
+
+        // design
+        // grid-template-columns: minmax(378px,1fr) 75px 1fr;
+        // grid-template-rows: minmax(220px,1fr) 220px 220px ;
+
+        //services
+        // grid-template-columns: 300px 1fr;
+        // grid-template-rows: repeat(3,200px) 1fr;
+        grid-template-columns: minmax(378px,1fr) 75px 75px 1fr;
+        grid-template-rows: minmax(220px,1fr) 220px 220px 200px 200px 200px 1fr;
+
+        .design__picture {
+            
+            //grid-row: 1 / 4;
+            grid-row: 1 / 4;
+            grid-column: 1 / 3;
+            background: dodgerblue;
+            //object-fit: cover;
+            //height: 100%;
+            display: block;
+            //object-fit: cover;
+
+            & img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .design__container {
+            //grid-row: 1 / -1;
+            //grid-row: 1 / 4;
+            grid-row: 1 / 4;
+            //grid-column: 3 / 4; 
+            grid-column: 3/-1;
+            padding: 8em 0;
+            background: purple;
+
+            .design__title {
+                max-width: 50%;
+            }
+
+            .design__statement {
+                padding: 2.5em 0;
+                max-width: 80%;
+            }
+
+            // button {
+            //     margin-top: .5em;
+            // }
+        }
+
+        .design__bg-element {
+            display: block;
+            grid-row: 2 / 3;
+            grid-column: 3 / 4; 
+            //background: fuchsia;
+            left: -30px;
+        }
+
+
+
+        .services__title {
+            grid-row: 4 / -1;
+            grid-column: 1 / 2; 
+
+            background-color: $primary-white;
+            color: $primary-text-black;
+            background: yellow;
+            
+        }
+
+        // .services__container {
+        //     //margin-top: -100px;
+        //     grid-row: 5 / 6;
+        //     grid-column: 2 / 3; 
+        //     z-index: 99999;
+        // }
+        .service {
+            background: lightseagreen;
+        }
+        .service1 {
+            grid-row: 3 / 4;
+            grid-column: 2 / -1; 
+        }
+        .service2 {
+            grid-row: 4 / 5;
+            grid-column: 2 / -1; 
+        }
+        .service3 {
+            grid-row: 5 / -1;
+            grid-column: 2 / -1; 
+        }
+    }
+}

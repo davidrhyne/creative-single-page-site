@@ -15,18 +15,6 @@ header {
         align-content: center;
         padding: 0;
     }
-
-    // @include mq($tablet-break) {
-    //     background-image: url('../images/desktop/image-header.jpg');
-    //     height: 700px;
-    //     width: auto;
-    //     margin: 0 auto;
-    // }
-
-    // @include mq($desktop-break) {
-    //     height: 800px;
-       
-    // }
 }
 
 .header__logo {

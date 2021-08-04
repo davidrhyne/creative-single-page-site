@@ -22,5 +22,29 @@
     p {
         padding: 0 1.25em 2em;
     }
+
+    @include mq($menu-break) {
+    //     display: grid;
+    //     grid-template-columns: 300px 1fr;
+    //     grid-template-rows: repeat(3,200px) 1fr;
+    //     //background-color: $primary-white;
+         padding: 0;
+    //     //margin-top: -100px;
+    //     z-index: 9999;
+    //     .services__title {
+    //         grid-row: 1 / -1;
+    //         grid-column: 1 / 2; 
+    //         background-color: $primary-white;
+    //         color: $primary-text-black;
+            
+    //     }
+
+    //     .services__container {
+    //         //margin-top: -100px;
+    //         grid-row: 1 / -1;
+    //         grid-column: 2 / 3; 
+    //         z-index: 99999;
+    //     }
+    }
 }
 
