@@ -12,7 +12,7 @@
     // display:inline-block;
     // border: solid 1px red;
 
-    &:after {
+    &::after {
         content: "";
         position: absolute;
         top: 0;
@@ -75,7 +75,7 @@
     }
 
     .product__carousel-item-title--visible {
-        display: block;
+        display: block; 
     }
 
     h2 {
@@ -91,9 +91,8 @@
 .project__image {
     width: 100%;
     height: auto;
-    
-
-    // padding: unset;
+    //height: 100%;
+    display: block;
 }
 
 .product__bg-element {
