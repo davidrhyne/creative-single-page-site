@@ -23,16 +23,14 @@
         display: flex;
         justify-content: space-between;
         padding: 5em 3em;
-        //border: 1px magenta solid;
+
         h2 {
             max-width: 50%;
             margin: 0;
         }
 
         button {
-            //padding: 0;
             font-size: 1rem;
-            //padding: 0 2em;
             height: 4rem;
             align-self: center;
         }
@@ -41,6 +39,7 @@
     @include mq($desktop-break) {
         position: relative;
         padding: 7em 10em;
+        // part 1 - to hide the left half of red wavy element
         box-shadow: -100px 0 0 0 white;
 
         .cta__bg-element {            
@@ -49,9 +48,11 @@
             left: -65px;
             top: 125px;
             
-            // to hide the left half of red wavy element
-            z-index: -1;
-            //overflow:scroll;
+            // part 2 - to hide the left half of red wavy element
+            z-index: -1;           
+        }
+
+        button {
             
         }
     }
