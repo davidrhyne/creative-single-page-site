@@ -11,13 +11,11 @@
   <title>Frontend Mentor | Creative single page site</title>
 </head>
 <body>
-
   <header>
     <img class="header__logo" src="./dist/images/desktop/logo.svg" alt="">
     <button class="nav-toggle" id="nav-toggle" aria-label="toggle navigation">
       <span class="hamburger" id="hamburger"></span>
     </button>
-
     <nav class="nav" id="nav">
       <ul >
         <li class="menu-item nav__item"><a href="#about">About</a></li> 
@@ -26,9 +24,8 @@
         <li class="menu-item nav__item"><a href="#">Schedule A Call</a></li>
       </ul>
     </nav>
-   
-    
   </header>
+  <!-- start of branding section -->
   <section class="branding" id="about">
     <picture class="picture">
       <source srcset="./dist/images/desktop/image-hero.jpg" media="(min-width: 1200px)">
@@ -36,51 +33,48 @@
       <img class="branding__image" src="./dist/images/mobile/image-hero.jpg"
         alt="two persons working at their desks">
     </picture>
-    <!-- <div>   -->
-      <h1 class="branding__title">Branding & website design agency</h1>
-      <p class="branding__statement">We specialize in visual storytelling by creating cohesive brand and website design solutions for small businesses, giving lasting impressions to audiences in a digital world.</p>
-      <button class="branding__button">Learn More</button>
-    <!-- </div> -->
+    <h1 class="branding__title">Branding & website design agency</h1>
+    <p class="branding__statement">We specialize in visual storytelling by creating cohesive brand and website design solutions for small businesses, giving lasting impressions to audiences in a digital world.</p>
+    <button class="branding__button">Learn More</button>
   </section>
+  <!-- end of branding section -->
+  <!-- start of combined design and services sections for grid layout -->
   <div class="grid__layout">
-    <!-- <div class="design" id="design"> -->
-      <picture class="design__picture">
-        <source srcset="./dist/images/desktop/image-strategic.jpg" media="(min-width: 1000px)">
-        <source srcset="./dist/images/tablet/image-strategic.jpg" media="(min-width: 750px)">
-        <img class="design__image" src="./dist/images/mobile/image-strategic.jpg"
-        alt="person working with laptop and notepad">
-      </picture>
-
-      <img class="design__bg-element" src="./dist/images/desktop/bg-pattern-wave-red.svg" alt=""/>  
-      <div class="design__container">
-        <h2 class="design__title"><span class="design__title--accent">Design</span> is strategic.</h1>
-        <p class="design__statement">"A well-crafted design strategy consistently produces desired outcomes and brand awareness. We are firm believers that success lies in creative collaboration with our clients."</p>
-        <button class="design__button">Schedule a Call</button>
-      </div>
-    <!-- </div> -->
-    <!-- <div class="services" id="services"> -->
-      <h2 class="services__title">Our approach for creating a winning brand</h2>
-      <!-- <div class="services__container"> -->
-        <!-- <div class="service serviceX" ></div> -->
-        <div class="service service1">
-          <div class="service__number">01</div>
-          <h3 class="service__title">Brand Strategy</h3>
-          <p class="service__description">Brand strategy is critical for long-term success. Outshining competitors and capturing the target audience are key.</p>
-        </div>
-        <div class="service service2">
-          <div class="service__number">02</div>
-          <h3 class="service__title">Brand Design</h3>
-          <p class="service__description">Keeping the brand design unique and meaningful helps in communicating the brand’s timeless value effectively..</p>
-        </div>
-        <div class="service service3">
-          <div class="service__number">03</div>
-          <h3 class="service__title">Web Design</h3>
-          <p class="service__description">A beautifully crafted website is the best tool for brand awareness, and ultimately results in increased revenue</p>
-        </div>
-      <!-- </div> -->
-    <!-- </div> -->
-  </div>
-  <!-- <section class="projects" id="projects"> -->
+    <!-- start of design section -->
+    <picture class="design__picture">
+      <source srcset="./dist/images/desktop/image-strategic.jpg" media="(min-width: 1000px)">
+      <source srcset="./dist/images/tablet/image-strategic.jpg" media="(min-width: 750px)">
+      <img class="design__image" src="./dist/images/mobile/image-strategic.jpg"
+      alt="person working with laptop and notepad">
+    </picture>
+    <img class="design__bg-element" src="./dist/images/desktop/bg-pattern-wave-red.svg" alt=""/>  
+    <div class="design__container">
+      <h2 class="design__title"><span class="design__title--accent">Design</span> is strategic.</h2>
+      <p class="design__statement">"A well-crafted design strategy consistently produces desired outcomes and brand awareness. We are firm believers that success lies in creative collaboration with our clients."</p>
+      <button class="design__button">Schedule a Call</button>
+    </div>
+    <!-- end of design section -->
+    <!-- start of services section -->
+    <h2 class="services__title">Our approach for creating a winning brand</h2>
+    <div class="service service1">
+      <div class="service__number">01</div>
+      <h3 class="service__title">Brand Strategy</h3>
+      <p class="service__description">Brand strategy is critical for long-term success. Outshining competitors and capturing the target audience are key.</p>
+    </div>
+    <div class="service service2">
+      <div class="service__number">02</div>
+      <h3 class="service__title">Brand Design</h3>
+      <p class="service__description">Keeping the brand design unique and meaningful helps in communicating the brand’s timeless value effectively..</p>
+    </div>
+    <div class="service service3">
+      <div class="service__number">03</div>
+      <h3 class="service__title">Web Design</h3>
+      <p class="service__description">A beautifully crafted website is the best tool for brand awareness, and ultimately results in increased revenue</p>
+    </div>
+    <!-- end of services section -->
+  </div><!-- start of combined design and services sections for grid layout -->
+  <!-- start of combined projects and projects navigation section -->
+  <!-- start of projects section -->
   <div class="projects__grid">
     <div class="projects__carousel">
       <!-- project item start -->
@@ -126,32 +120,36 @@
       </div>
       <!-- project item end -->
     </div>
-  <!-- </section> -->
-  <section class="project__carousel-nav" > 
-    <h2 class="product__carousel-item-title product__carousel-item-title--visible">Brand naming & guidelines</h2>
-    <h2 class="product__carousel-item-title">Brand identity & merchandise</h2>
-    <h2 class="product__carousel-item-title">Brand identity & web design</h2>
-    <button class="project__carousel-nav-button-previous" id="project__carousel-nav-button-previous">
-      <img src="./dist/images/desktop/icon-arrow-previous.svg" alt="previous" class="project__carousel-nav-button-previous-logo">
-    </button>
-    <button class="project__carousel-nav-button-next" id="project__carousel-nav-button-next">
-      <img src="./dist/images/desktop/icon-arrow-next.svg" alt="next" class="project__carousel-nav-button-next-logo">
-    </button>
-    <img class="product__bg-element" src="./dist/images/desktop/bg-pattern-wavy-white.svg" alt=""/>  
-  </section>
-  <img class="product__bg-element--large" src="./dist/images/desktop/bg-pattern-wavy-white.svg" alt=""/> 
-  </div>
-
+    <!-- end of projects section -->
+    <!-- start of projects navigation section -->
+    <section class="project__carousel-nav" > 
+      <h2 class="product__carousel-item-title product__carousel-item-title--visible">Brand naming & guidelines</h2>
+      <h2 class="product__carousel-item-title">Brand identity & merchandise</h2>
+      <h2 class="product__carousel-item-title">Brand identity & web design</h2>
+      <button class="project__carousel-nav-button-previous" id="project__carousel-nav-button-previous">
+        <img src="./dist/images/desktop/icon-arrow-previous.svg" alt="previous" class="project__carousel-nav-button-previous-logo">
+      </button>
+      <button class="project__carousel-nav-button-next" id="project__carousel-nav-button-next">
+        <img src="./dist/images/desktop/icon-arrow-next.svg" alt="next" class="project__carousel-nav-button-next-logo">
+      </button>
+      <img class="product__bg-element" src="./dist/images/desktop/bg-pattern-wavy-white.svg" alt=""/>  
+    </section>
+    <!-- end of projects navigation section -->
+    <!-- white wavy bg element used in tablet and desktop views -->
+    <img class="product__bg-element--large" src="./dist/images/desktop/bg-pattern-wavy-white.svg" alt=""/> 
+  </div>  
+  <!-- end of combined projects and projects navigation section -->
+  <!-- start of call to action section -->
   <section class="cta" id="cta">
     <img class="cta__bg-element" src="./dist/images/desktop/bg-pattern-wave-red.svg" alt=""/>  
-    <h2 class="cta__title">Let's build something great together.</h1>
+    <h2 class="cta__title">Let's build something great together.</h2>
     <button class="cta__button">Schedule a Call</button>
   </section>
+  <!-- end of call to action section -->
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>.
     <span>Coded with ❤️ by <a href="mailto:rhynedavid16@gmail.com">David</a>.</span>
   </div>
   <script src="./dist/src/creative.js"></script>
-
 </body>
 </html>

@@ -1,17 +1,10 @@
 @use '../abstracts/index' as *;
 @use '../base/index' as *;
 
-.projects {
-    //border: 1px dodgerblue solid;
-    //padding: 1em;
-}
-
-.projects__carousel {
-    
+.projects__carousel {   
     position:relative;
-    // display:inline-block;
-    // border: solid 1px red;
 
+    // overlay to darken the image
     &::after {
         content: "";
         position: absolute;
@@ -21,7 +14,6 @@
         height:100%;
         display: inline-block;
         background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.6)   );
-        //display: inline-block;
     }
 
     .project__carousel-item,    
@@ -31,9 +23,6 @@
         display: none;
     }
 
-    .project__carousel-item {
-        //border: 1px solid limegreen;
-    }
     .project__carousel-item--visible,
     .product__carousel-item-title--visible {
         display: block;
@@ -43,12 +32,10 @@
         position: absolute;
         top: 78%;  
         width: 80%;      
-        // margin: 0 auto;
         left: 10%;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        //border: solid 1px magenta;
         color: $primary-white;
         z-index: 99;
 
@@ -56,18 +43,13 @@
             font-weight: fw(extraBold);
         }
     }
-
-
 }
 
-
 .project__carousel-nav {
-
     padding: 4.5em 2em 3em;
     background: $primary-bg-black;
     color: $primary-white;
     margin-top: -4px;
-    //z-index: 9999;
     
     .product__carousel-item-title,
     .product__carousel-item-title--hidden {
@@ -85,24 +67,24 @@
     button {
         background: $primary-bg-black;
         margin-right: 1em;
+
+        &:hover {
+            // lighten arrow SVG files when hovered            
+            img {
+                filter: invert(82%) sepia(88%) saturate(1535%) hue-rotate(299deg) brightness(116%) contrast(118%);
+            }
+        }
     }
 }
 
 .project__image {
     width: 100%;
     height: auto;
-    //height: 100%;
     display: block;
 }
 
 .product__bg-element {
-    //background: black;
-    //border: 1px solid red;
     display: none;
     width: 63px;
     height: auto;
-    // position: relative;
-    // top: -18px;
-    // left: 30px;
-    // z-index: 10;
 }

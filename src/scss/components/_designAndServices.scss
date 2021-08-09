@@ -1,0 +1,221 @@
+@use '../abstracts/index' as *;
+@use '../base/index' as *;
+
+/*
+I would have had the design and services as separate sections, but due to how these sections overlap in the tablet and desktop views, the solution that involved CSS grid required that they be part of the same grid.
+
+To my knowledge, sections of separate grid cannot overlap onto other sections of other grids.
+*/
+
+// mobile first layout for design section
+.design__container {
+    background-color: $primary-bg-black;
+    color: $primary-white;
+    margin-bottom: .5em;
+    padding: 5em 2em 5em;   
+    margin-top: -35px;
+
+    h2 span {
+        color: $primary-red;
+    }
+
+    p {
+        padding: 2em 0 1em;
+        max-width: 400px;
+    }
+
+    button {
+        font-size: 0.9375rem;
+        background-color: $primary-bg-black;
+        color: $primary-red;
+        border-bottom: 2px solid $primary-red;
+        padding: 0 0 .5em;
+
+        &:hover {           
+            color: $primary-red-accent;           
+            border-bottom: 2px solid $primary-red-accent;
+        }
+    }
+}
+
+.design__image {
+    width: 100%;
+    height: auto;    
+}
+
+.design__bg-element {
+    width: 63px;
+    height: auto;
+    position: relative;
+    top: -18px;
+    left: 30px;
+    z-index: 10;
+}
+
+// mobile first layou for services section
+.services__title {
+    
+    background-color: $primary-red;
+    color: $primary-white;
+    padding: 3em 1.5rem 1.5em;
+}
+
+.service {
+    background-color: $primary-red;
+    color: $primary-white;
+    padding-left: 1.5rem;
+ 
+    h3 {
+        font-size: .9375rem;
+        padding: 3.5em 1.25em 1.5em;    
+    }
+  
+    .service__number {
+        position: absolute;
+    }
+
+    p {
+        padding: 0 1.25em 2em;
+    }
+
+    @include mq($menu-break) {
+         padding: 0;
+    }
+}
+
+.service3 {
+    padding-bottom: 5em;
+}
+
+// combined layout to have overlapping grid elements
+.grid__layout {
+
+    //  start of grid for tablet sized screens
+    @include mq($menu-break) {
+        
+        display: grid;
+        grid-template-columns: minmax(328px,1fr) 50px 75px 1fr;
+        grid-template-rows: minmax(220px,1fr) 220px 130px 200px 170px 1fr;
+
+        .design__picture {
+            grid-row: 1 / 4;
+            grid-column: 1 / 3;
+            display: block;
+
+            & img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .design__container {
+            margin-top: unset;
+            grid-row: 1 / 4;
+            grid-column: 3/-1;
+            padding: 8em 0 0 4em;
+
+            .design__title {
+                max-width: 50%;
+            }
+
+            .design__statement {
+                padding: 2.5em 0;
+                max-width: 80%;
+            }
+        }
+
+        .design__bg-element {
+            display: block;
+            grid-row: 2 / 3;
+            grid-column: 3 / 4; 
+            left: -30px;
+        }
+
+        .services__title {
+            grid-row: 4 / -1;
+            grid-column: 1 / 2; 
+            padding: 3.5em 1em;
+            background-color: $primary-white;
+            color: $primary-text-black;
+        }
+
+        .service {
+            padding-left: 3rem;
+        }
+        .service1 {
+            grid-row: 3 / 5;
+            grid-column: 2 / -1; 
+            padding-top: 8em;
+        }
+        .service2 {
+            grid-row: 5 / 6;
+            grid-column: 2 / -1; 
+        }
+        .service3 {
+            grid-row: 6 / -1;
+            grid-column: 2 / -1; 
+        }
+    }
+    //  end of grid for tablet sized screens
+    
+    //  start of grid for desktop sized screens
+    @include mq($desktop-break) {
+        grid-template-columns: minmax(300px,1fr) 200px 100px 1fr;
+        grid-template-rows:  280px  510px 200px 245px 255px 1fr;
+
+
+        .design__bg-element {
+            height: 61px;
+            width: auto;
+            left: -72px;
+        }
+
+        .design__container {
+            padding: 16em 0 0 10em;
+
+            .design__title {
+                max-width: 50%;
+            }
+
+            .design__statement {
+                padding: 2.5em 0;
+                max-width: 80%;
+            }
+
+            button {
+                font-size: 1.125rem;
+            }
+        }
+
+        .services__title {
+
+            grid-column: 1 / 3;
+            z-index: 1;
+            background: transparent;
+            padding: 3.5em 0 0 3em;
+        }
+
+        .service {
+            padding-left: 18rem;
+            
+            h3 {
+                font-size: 1.25rem;
+                padding: 2.5em 0 1.5em 3.5rem;
+            }
+
+            p {
+                padding: 0 0 0 3.5rem;
+                max-width: 80%;
+            }
+        }
+        .service1 {
+            padding-top: 13em;
+            
+        }
+
+        .service3 {
+            padding-bottom: 14em;
+        }        
+    }
+    //  end of grid for desktop sized screens
+}

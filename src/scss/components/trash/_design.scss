@@ -1,0 +1,46 @@
+// @use '../abstracts/index' as *;
+// @use '../base/index' as *;
+
+// .design__container {
+//     background-color: $primary-bg-black;
+//     color: $primary-white;
+//     margin-bottom: .5em;
+//     padding: 5em 2em 5em;   
+//     margin-top: -35px;
+
+//     h2 span {
+//         color: $primary-red;
+//     }
+
+//     p {
+//         padding: 2em 0 1em;
+//         max-width: 400px;
+//     }
+
+//     button {
+//         font-size: 0.9375rem;
+//         background-color: $primary-bg-black;
+//         color: $primary-red;
+//         border-bottom: 2px solid $primary-red;
+//         padding: 0 0 .5em;
+
+//         &:hover {           
+//             color: $primary-red-accent;           
+//             border-bottom: 2px solid $primary-red-accent;
+//         }
+//     }
+// }
+
+// .design__image {
+//     width: 100%;
+//     height: auto;    
+// }
+
+// .design__bg-element {
+//     width: 63px;
+//     height: auto;
+//     position: relative;
+//     top: -18px;
+//     left: 30px;
+//     z-index: 10;
+// }

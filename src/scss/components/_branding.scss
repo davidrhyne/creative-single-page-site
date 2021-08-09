@@ -5,14 +5,12 @@
     
     h1 {
         padding: 1.25em 1.5rem 0;
-        //border: 1px red solid;
         min-width: 22rem;
         max-width: 80%;
     }
 
     p {
         padding: 2em 1.5rem 2.5em;
-        //border: 1px red solid;
         min-width: 22rem;
         max-width: 80%;
     }
@@ -29,13 +27,10 @@
         height: auto;
 
         @include mq($large-desktop-break) {
-            // height: 100%;
-            // width: auto;
             height: auto;
             width: 100%;
             margin-right: 0;
             margin-left: auto;
-//            display: block;
         }
     }
 
@@ -65,8 +60,6 @@
             height: 75px;
             cursor: pointer;
             padding: 0;
- 
-
             grid-row: 3 / 4;
             grid-column: 1/2;
         }
@@ -79,26 +72,25 @@
     }
 
     @include mq($desktop-break) {
-        //background: rebeccapurple;
-        //grid-template-columns: minmax(200px,1fr) 1fr 1fr;
-        grid-template-rows: 400px 150px minmax(150px,1fr);
-        //padding-left: 10rem;
-         
+        grid-template-rows: 375px 150px minmax(100px,1fr);         
 
         h1 {
-            //background: red;
-            //padding: 1.5em 5rem 0;
             padding: 1.25em 0 0 10rem;
-            //max-width: 9%;
+            
         }
+
         p {
             max-width: 80%;
-            padding: 2em 0 2.5em 10rem;
+            padding: 1em 0 1em 10rem;
         }
 
         button {
             margin-top: 1em;
             margin-left: 10rem;
+
+            &:hover {
+                background: $primary-red-accent;
+            }
         }
     }
 
@@ -107,5 +99,4 @@
             max-width: 90%;
         }
     }
-
 }

@@ -196,12 +196,13 @@ nav a {
   text-decoration: none;
   color: #fff;
   display: inline-block;
-  width: 100%;
+  width: 80%;
   height: 100%;
   padding: 1em;
 }
 @media (min-width: 600px) {
   nav a {
+    width: 100%;
     padding: 1.25em 1em;
     font-size: 0.9375rem;
   }
@@ -220,10 +221,16 @@ nav a:hover {
     background-color: #191921;
     box-shadow: unset;
   }
+  nav a:hover:hover {
+    background-color: #434356;
+  }
 }
 @media (min-width: 1000px) {
   nav a:hover {
     box-shadow: 1em 0px 0px 0px #191921, -1em 0px 0px 0px #191921;
+  }
+  nav a:hover:hover {
+    box-shadow: 1em 0px 0px 0px #434356, -1em 0px 0px 0px #434356;
   }
 }
 
@@ -355,18 +362,21 @@ nav a:hover {
 }
 @media (min-width: 1000px) {
   .branding {
-    grid-template-rows: 400px 150px minmax(150px, 1fr);
+    grid-template-rows: 375px 150px minmax(100px, 1fr);
   }
   .branding h1 {
     padding: 1.25em 0 0 10rem;
   }
   .branding p {
     max-width: 80%;
-    padding: 2em 0 2.5em 10rem;
+    padding: 1em 0 1em 10rem;
   }
   .branding button {
     margin-top: 1em;
     margin-left: 10rem;
+  }
+  .branding button:hover {
+    background: #ff9393;
   }
 }
 @media (min-width: 1200px) {
@@ -375,6 +385,11 @@ nav a:hover {
   }
 }
 
+/*
+I would have had the design and services as separate sections, but due to how these sections overlap in the tablet and desktop views, the solution that involved CSS grid required that they be part of the same grid.
+
+To my knowledge, sections of separate grid cannot overlap onto other sections of other grids.
+*/
 .design__container {
   background-color: #191921;
   color: #fff;
@@ -396,6 +411,11 @@ nav a:hover {
   border-bottom: 2px solid #f94f4f;
   padding: 0 0 0.5em;
 }
+.design__container button:hover {
+  color: #ff9393;
+  border-bottom: 2px solid #ff9393;
+}
+
 .design__image {
   width: 100%;
   height: auto;
@@ -439,140 +459,6 @@ nav a:hover {
 
 .service3 {
   padding-bottom: 5em;
-}
-
-.projects__carousel {
-  position: relative;
-}
-.projects__carousel::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: inline-block;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
-}
-.projects__carousel .project__carousel-item,
-.projects__carousel .project__carousel-item--hidden,
-.projects__carousel .product__carousel-item-title,
-.projects__carousel .product__carousel-item-title--hidden {
-  display: none;
-}
-.projects__carousel .project__carousel-item--visible,
-.projects__carousel .product__carousel-item-title--visible {
-  display: block;
-}
-.projects__carousel .product__carousel-item-description {
-  position: absolute;
-  top: 78%;
-  width: 80%;
-  left: 10%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  color: #fff;
-  z-index: 99;
-}
-.projects__carousel .product__carousel-item-description .product__carousel-item-description-title {
-  font-weight: 800;
-}
-
-.project__carousel-nav {
-  padding: 4.5em 2em 3em;
-  background: #191921;
-  color: #fff;
-  margin-top: -4px;
-}
-.project__carousel-nav .product__carousel-item-title,
-.project__carousel-nav .product__carousel-item-title--hidden {
-  display: none;
-}
-.project__carousel-nav .product__carousel-item-title--visible {
-  display: block;
-}
-.project__carousel-nav h2 {
-  margin: 0 0 1em;
-}
-.project__carousel-nav button {
-  background: #191921;
-  margin-right: 1em;
-}
-
-.project__image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.product__bg-element {
-  display: none;
-  width: 63px;
-  height: auto;
-}
-
-.cta {
-  padding: 6em 1.5em;
-}
-.cta h2 {
-  margin: 0 0 1.5em;
-}
-.cta button {
-  background-color: #f94f4f;
-  color: #fff;
-  padding: 1.25em 2em;
-}
-.cta .cta__bg-element {
-  display: none;
-}
-@media (min-width: 750px) {
-  .cta {
-    display: flex;
-    justify-content: space-between;
-    padding: 5em 3em;
-  }
-  .cta h2 {
-    max-width: 50%;
-    margin: 0;
-  }
-  .cta button {
-    font-size: 1rem;
-    height: 4rem;
-    align-self: center;
-  }
-}
-@media (min-width: 1000px) {
-  .cta {
-    position: relative;
-    padding: 7em 10em;
-    box-shadow: -100px 0 0 0 white;
-  }
-  .cta .cta__bg-element {
-    display: block;
-    position: absolute;
-    left: -65px;
-    top: 125px;
-    z-index: -1;
-  }
-}
-
-.attribution {
-  background: #191921;
-  color: #fff;
-  padding: 5em 2em;
-  text-align: center;
-}
-.attribution span {
-  display: block;
-  margin: 1em 0 0;
-}
-.attribution a {
-  text-decoration: none;
-  color: #f94f4f;
-}
-.attribution a:hover {
-  text-decoration: underline;
 }
 
 @media (min-width: 750px) {
@@ -667,7 +553,6 @@ nav a:hover {
   }
   .grid__layout .service h3 {
     font-size: 1.25rem;
-    border: 1px solid dodgerblue;
     padding: 2.5em 0 1.5em 3.5rem;
   }
   .grid__layout .service p {
@@ -680,6 +565,146 @@ nav a:hover {
   .grid__layout .service3 {
     padding-bottom: 14em;
   }
+}
+
+.projects__carousel {
+  position: relative;
+}
+.projects__carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+}
+.projects__carousel .project__carousel-item,
+.projects__carousel .project__carousel-item--hidden,
+.projects__carousel .product__carousel-item-title,
+.projects__carousel .product__carousel-item-title--hidden {
+  display: none;
+}
+.projects__carousel .project__carousel-item--visible,
+.projects__carousel .product__carousel-item-title--visible {
+  display: block;
+}
+.projects__carousel .product__carousel-item-description {
+  position: absolute;
+  top: 78%;
+  width: 80%;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: #fff;
+  z-index: 99;
+}
+.projects__carousel .product__carousel-item-description .product__carousel-item-description-title {
+  font-weight: 800;
+}
+
+.project__carousel-nav {
+  padding: 4.5em 2em 3em;
+  background: #191921;
+  color: #fff;
+  margin-top: -4px;
+}
+.project__carousel-nav .product__carousel-item-title,
+.project__carousel-nav .product__carousel-item-title--hidden {
+  display: none;
+}
+.project__carousel-nav .product__carousel-item-title--visible {
+  display: block;
+}
+.project__carousel-nav h2 {
+  margin: 0 0 1em;
+}
+.project__carousel-nav button {
+  background: #191921;
+  margin-right: 1em;
+}
+.project__carousel-nav button:hover img {
+  filter: invert(82%) sepia(88%) saturate(1535%) hue-rotate(299deg) brightness(116%) contrast(118%);
+}
+
+.project__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product__bg-element {
+  display: none;
+  width: 63px;
+  height: auto;
+}
+
+.cta {
+  padding: 3em 1.5em 5em;
+}
+.cta h2 {
+  margin: 0 0 1.5em;
+}
+.cta button {
+  background-color: #f94f4f;
+  color: #fff;
+  padding: 1.25em 2em;
+}
+.cta button:hover {
+  background-color: #ff9393;
+}
+.cta .cta__bg-element {
+  display: none;
+}
+@media (min-width: 750px) {
+  .cta {
+    display: flex;
+    justify-content: space-between;
+    padding: 5em 3em;
+  }
+  .cta h2 {
+    max-width: 50%;
+    margin: 0;
+  }
+  .cta button {
+    font-size: 1rem;
+    height: 4rem;
+    align-self: center;
+  }
+}
+@media (min-width: 1000px) {
+  .cta {
+    position: relative;
+    padding: 7em 10em;
+    box-shadow: -100px 0 0 0 white;
+  }
+  .cta .cta__bg-element {
+    display: block;
+    position: absolute;
+    left: -65px;
+    top: 125px;
+    z-index: -1;
+  }
+}
+
+.attribution {
+  background: #191921;
+  color: #fff;
+  padding: 5em 2em;
+  text-align: center;
+}
+.attribution span {
+  display: block;
+  margin: 1em 0 0;
+}
+.attribution a {
+  text-decoration: none;
+  color: #f94f4f;
+}
+.attribution a:hover {
+  text-decoration: underline;
 }
 
 @media (min-width: 750px) {
@@ -750,6 +775,7 @@ html {
   scroll-behavior: smooth;
   max-width: 1440px;
   margin: 0 auto;
+  border-left: 1px solid dodgerblue;
 }
 
 /*# sourceMappingURL=main.css.map */

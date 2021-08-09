@@ -2,9 +2,7 @@
 @use '../base/index' as *;
 
 .cta {
-    //border-left: 100px solid dodgerblue;
-
-    padding: 6em 1.5em;
+    padding: 3em 1.5em 5em;
 
     h2 {
         margin: 0 0 1.5em;
@@ -13,6 +11,10 @@
         background-color: $primary-red;
         color: $primary-white;
         padding: 1.25em 2em;
+
+        &:hover {
+            background-color: $primary-red-accent;
+        }
     }
 
     .cta__bg-element {
@@ -50,10 +52,6 @@
             
             // part 2 - to hide the left half of red wavy element
             z-index: -1;           
-        }
-
-        button {
-            
         }
     }
 }

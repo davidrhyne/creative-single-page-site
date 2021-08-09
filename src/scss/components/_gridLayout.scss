@@ -1,140 +1,135 @@
-@use '../abstracts/index' as *;
-@use '../base/index' as *;
+// @use '../abstracts/index' as *;
+// @use '../base/index' as *;
 
-.grid__layout {
+// .grid__layout {
 
-
-    @include mq($menu-break) {
+//     @include mq($menu-break) {
         
-        display: grid;
-        grid-template-columns: minmax(328px,1fr) 50px 75px 1fr;
-        grid-template-rows: minmax(220px,1fr) 220px 130px 200px 170px 1fr;
+//         display: grid;
+//         grid-template-columns: minmax(328px,1fr) 50px 75px 1fr;
+//         grid-template-rows: minmax(220px,1fr) 220px 130px 200px 170px 1fr;
 
-        .design__picture {
-            grid-row: 1 / 4;
-            grid-column: 1 / 3;
-            display: block;
+//         .design__picture {
+//             grid-row: 1 / 4;
+//             grid-column: 1 / 3;
+//             display: block;
 
-            & img {
-                height: 100%;
-                object-fit: cover;
-            }
-        }
+//             & img {
+//                 height: 100%;
+//                 object-fit: cover;
+//             }
+//         }
 
-        .design__container {
-            margin-top: unset;
-            grid-row: 1 / 4;
-            grid-column: 3/-1;
-            padding: 8em 0 0 4em;
+//         .design__container {
+//             margin-top: unset;
+//             grid-row: 1 / 4;
+//             grid-column: 3/-1;
+//             padding: 8em 0 0 4em;
 
-            .design__title {
-                max-width: 50%;
-            }
+//             .design__title {
+//                 max-width: 50%;
+//             }
 
-            .design__statement {
-                padding: 2.5em 0;
-                max-width: 80%;
-            }
-        }
+//             .design__statement {
+//                 padding: 2.5em 0;
+//                 max-width: 80%;
+//             }
+//         }
 
-        .design__bg-element {
-            display: block;
-            grid-row: 2 / 3;
-            grid-column: 3 / 4; 
-            left: -30px;
-        }
+//         .design__bg-element {
+//             display: block;
+//             grid-row: 2 / 3;
+//             grid-column: 3 / 4; 
+//             left: -30px;
+//         }
 
-        .services__title {
-            grid-row: 4 / -1;
-            grid-column: 1 / 2; 
-            padding: 3.5em 1em;
-            background-color: $primary-white;
-            color: $primary-text-black;
-        }
+//         .services__title {
+//             grid-row: 4 / -1;
+//             grid-column: 1 / 2; 
+//             padding: 3.5em 1em;
+//             background-color: $primary-white;
+//             color: $primary-text-black;
+//         }
 
-        .service {
-            padding-left: 3rem;
-        }
-        .service1 {
-            grid-row: 3 / 5;
-            grid-column: 2 / -1; 
-            padding-top: 8em;
-        }
-        .service2 {
-            grid-row: 5 / 6;
-            grid-column: 2 / -1; 
-        }
-        .service3 {
-            grid-row: 6 / -1;
-            grid-column: 2 / -1; 
-        }
-    }
+//         .service {
+//             padding-left: 3rem;
+//         }
+//         .service1 {
+//             grid-row: 3 / 5;
+//             grid-column: 2 / -1; 
+//             padding-top: 8em;
+//         }
+//         .service2 {
+//             grid-row: 5 / 6;
+//             grid-column: 2 / -1; 
+//         }
+//         .service3 {
+//             grid-row: 6 / -1;
+//             grid-column: 2 / -1; 
+//         }
+//     }
 
-    @include mq($desktop-break) {
-        //border: 4px yellow solid;
-        grid-template-columns: minmax(300px,1fr) 200px 100px 1fr;
-        //grid-template-rows:  280px  510px 200px 300px 350px 1fr;
-        grid-template-rows:  280px  510px 200px 245px 255px 1fr;
+//     @include mq($desktop-break) {
+//         grid-template-columns: minmax(300px,1fr) 200px 100px 1fr;
+//         grid-template-rows:  280px  510px 200px 245px 255px 1fr;
 
 
-        .design__bg-element {
-            height: 61px;
-            width: auto;
-            left: -72px;
-        }
+//         .design__bg-element {
+//             height: 61px;
+//             width: auto;
+//             left: -72px;
+//         }
 
-        .design__container {
-            padding: 16em 0 0 10em;
+//         .design__container {
+//             padding: 16em 0 0 10em;
 
-            .design__title {
-                max-width: 50%;
-            }
+//             .design__title {
+//                 max-width: 50%;
+//             }
 
-            .design__statement {
-                padding: 2.5em 0;
-                max-width: 80%;
-            }
+//             .design__statement {
+//                 padding: 2.5em 0;
+//                 max-width: 80%;
+//             }
 
-            button {
-                font-size: 1.125rem;
-            }
-        }
+//             button {
+//                 font-size: 1.125rem;
+//             }
+//         }
 
-        .services__title {
+//         .services__title {
             
-            //position: relative;
-            grid-column: 1 / 3;
-            z-index: 1;
-            background: transparent;
-            padding: 3.5em 0 0 3em;
+//             //position: relative;
+//             grid-column: 1 / 3;
+//             z-index: 1;
+//             background: transparent;
+//             padding: 3.5em 0 0 3em;
 
-        }
+//         }
 
-        .service {
-            padding-left: 18rem;
+//         .service {
+//             padding-left: 18rem;
             
-            h3 {
-                font-size: 1.25rem;
-                border: 1px solid dodgerblue;
-                padding: 2.5em 0 1.5em 3.5rem;
-            }
+//             h3 {
+//                 font-size: 1.25rem;
+//                 //border: 1px solid dodgerblue;
+//                 padding: 2.5em 0 1.5em 3.5rem;
+//             }
 
-            p {
-                padding: 0 0 0 3.5rem;
-                max-width: 80%;
-            }
-        }
-        .service1 {
-            padding-top: 13em;
+//             p {
+//                 padding: 0 0 0 3.5rem;
+//                 max-width: 80%;
+//             }
+//         }
+//         .service1 {
+//             padding-top: 13em;
             
-        }
-        .service2 {
+//         }
+//         .service2 {
             
-        }
-        .service3 {
-            padding-bottom: 14em;
-        }
-
-        
-    }
-}
+//         }
+//         .service3 {
+//             padding-bottom: 14em;
+//         }        
+//     }
+// }
