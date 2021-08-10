@@ -11,17 +11,17 @@
   <title>Frontend Mentor | Creative single page site</title>
 </head>
 <body>
-  <header>
+  <header class="header">
     <img class="header__logo" src="./dist/images/desktop/logo.svg" alt="">
     <button class="nav-toggle" id="nav-toggle" aria-label="toggle navigation">
       <span class="hamburger" id="hamburger"></span>
     </button>
     <nav class="nav" id="nav">
       <ul >
-        <li class="menu-item nav__item"><a href="#about">About</a></li> 
-        <li class="menu-item nav__item"><a href="#services">Services</a></li>
-        <li class="menu-item nav__item"><a href="#projects">Projects</a></li>
-        <li class="menu-item nav__item"><a href="#">Schedule A Call</a></li>
+        <li class="menu-item nav__link"><a class="nav-link" href="#about">About</a></li> 
+        <li class="menu-item nav__link"><a class="nav-link" href="#services">Services</a></li>
+        <li class="menu-item nav__link"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="menu-item nav__link"><a class="nav-link" href="#cta">Schedule A Call</a></li>
       </ul>
     </nav>
   </header>
@@ -39,7 +39,7 @@
   </section>
   <!-- end of branding section -->
   <!-- start of combined design and services sections for grid layout -->
-  <div class="grid__layout">
+  <div class="grid__layout" id="services">
     <!-- start of design section -->
     <picture class="design__picture">
       <source srcset="./dist/images/desktop/image-strategic.jpg" media="(min-width: 1000px)">
@@ -75,7 +75,7 @@
   </div><!-- start of combined design and services sections for grid layout -->
   <!-- start of combined projects and projects navigation section -->
   <!-- start of projects section -->
-  <div class="projects__grid">
+  <div class="projects__grid" id="projects">
     <div class="projects__carousel">
       <!-- project item start -->
       <div class="project__carousel-item project__carousel-item--visible">

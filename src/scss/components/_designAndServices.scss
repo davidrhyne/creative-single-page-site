@@ -64,10 +64,12 @@ To my knowledge, sections of separate grid cannot overlap onto other sections of
     background-color: $primary-red;
     color: $primary-white;
     padding-left: 1.5rem;
+    
  
     h3 {
         font-size: .9375rem;
         padding: 3.5em 1.25em 1.5em;    
+        
     }
   
     .service__number {
@@ -75,11 +77,28 @@ To my knowledge, sections of separate grid cannot overlap onto other sections of
     }
 
     p {
-        padding: 0 1.25em 2em;
+        //padding: 0 1.25em 2em;
+        //max-width: 500px;
+        padding: 0 4em 2em 1.25em;
+    }
+
+
+
+    @include mq($tablet-break) {
+
+        p {
+            
+            padding: 0 10em 2em 1.25em;
+        }
     }
 
     @include mq($menu-break) {
-         padding: 0;
+
+        p {
+            
+            //padding: 0 1.25em 2em;
+            padding: 0 2em 2em 1.25em;
+        }
     }
 }
 
@@ -92,7 +111,8 @@ To my knowledge, sections of separate grid cannot overlap onto other sections of
 
     //  start of grid for tablet sized screens
     @include mq($menu-break) {
-        
+        //border: 5px solid yellow;
+        margin-top: -50px;
         display: grid;
         grid-template-columns: minmax(328px,1fr) 50px 75px 1fr;
         grid-template-rows: minmax(220px,1fr) 220px 130px 200px 170px 1fr;
@@ -121,6 +141,7 @@ To my knowledge, sections of separate grid cannot overlap onto other sections of
             .design__statement {
                 padding: 2.5em 0;
                 max-width: 80%;
+                //background: blue;
             }
         }
 
@@ -148,20 +169,36 @@ To my knowledge, sections of separate grid cannot overlap onto other sections of
             padding-top: 8em;
         }
         .service2 {
+           // color: blue;
             grid-row: 5 / 6;
             grid-column: 2 / -1; 
+            margin-top: -2em;
         }
         .service3 {
             grid-row: 6 / -1;
             grid-column: 2 / -1; 
+            margin-top: -2em;
         }
     }
     //  end of grid for tablet sized screens
     
+    @include mq($small-desktop-break) {
+        //border: 5px dodgerblue solid;
+        .design__container {
+           //min-width: 80%;
+        }
+
+        .design__title {
+            min-width: 80%;
+        }
+    }
+
+
     //  start of grid for desktop sized screens
     @include mq($desktop-break) {
+        //border: 5px magenta solid;
         grid-template-columns: minmax(300px,1fr) 200px 100px 1fr;
-        grid-template-rows:  280px  510px 200px 245px 255px 1fr;
+        grid-template-rows:  180px  610px 200px 245px 255px 1fr;
 
 
         .design__bg-element {
@@ -171,10 +208,11 @@ To my knowledge, sections of separate grid cannot overlap onto other sections of
         }
 
         .design__container {
-            padding: 16em 0 0 10em;
+            //padding: 16em 0 0 10em;
+            padding: 8em 0 0 8em;
 
             .design__title {
-                max-width: 50%;
+                //max-width: 50%;
             }
 
             .design__statement {
@@ -196,7 +234,7 @@ To my knowledge, sections of separate grid cannot overlap onto other sections of
         }
 
         .service {
-            padding-left: 18rem;
+            padding-left: 14rem;
             
             h3 {
                 font-size: 1.25rem;
@@ -205,7 +243,7 @@ To my knowledge, sections of separate grid cannot overlap onto other sections of
 
             p {
                 padding: 0 0 0 3.5rem;
-                max-width: 80%;
+                max-width: 90%;
             }
         }
         .service1 {
@@ -213,9 +251,22 @@ To my knowledge, sections of separate grid cannot overlap onto other sections of
             
         }
 
+        .service2 {
+           // color: green; 
+            margin-top: 0;
+            
+        }
         .service3 {
             padding-bottom: 14em;
+            margin-top: 0;
         }        
     }
     //  end of grid for desktop sized screens
+
+    @include mq($large-desktop-break) {
+
+        .service {
+            padding-left: 18rem;
+        }
+    }
 }
