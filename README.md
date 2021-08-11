@@ -16,9 +16,6 @@ This is a solution to the [Creative agency single page site challenge on Fronten
     - [Continued development](#continued-development)
     - [Useful resources](#useful-resources)
   - [Author](#author)
-  - [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -33,14 +30,6 @@ Users should be able to:
 ### Screenshot
 
 ![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
@@ -58,54 +47,23 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 
-
 ### What I learned
 
-This was a good project to learn about CSS grid and how to make grid element overlap each other.  The key takeaway would be make sure all the elements that interact with each other should be within the same div/section.  Elements that are not within the same grid cannot be made of overlap with elements belonging to different grids.  And similarly, a grid works as a parent to its children elements and does not have the ability to affect grandchildren elements.  Therefore, it is important to watch how elements are nested in relation to the grid's parent element. 
+The number 1 take away is how the format the HTML when there will be multiple overlapping elements within a grid.  Specifically, all the elements that will interact with each other need to be within the same grid.  Secondly, CSS grid uses a parent to child relationship.  Therefore, an element that will placed by the grid needs to be a child to the parent of the grid element.  The child element may be a div that contains other elements, but grid will only place that container div.  Grid will not be able to access any elements within the container div.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+Up until this project, I have found nature divisions within a website to wrap in their own section/div.  
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I will continue to make frontendmentor.io projects to get more practice and learn more skills.  Each project has its own set of challenges which are great for adding new skills.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Overlap content with Grid](https://www.youtube.com/watch?v=HFG3BKOqOlE) - This short tutorial from Kevin Powell helped me understand how to overlap content while using CSS grid.
+- [Changing the color of SVG file - part 1](https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element) - I have used the stackoverflow resource a couple times because it has a link the third resource below.
+- [Changing the color of SVG file - part 2](https://codepen.io/sosuke/pen/Pjoqqp) - This is a link to the codepen that has the function for get the filter settings to change the color of an SVG file.  It may not be perfect, but does more than 95% of the job.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [@davidrhyne](https://www.frontendmentor.io/profile/davidrhyne)
+- Twitter - [@DavidRhyne16](https://www.twitter.com/DavidRhyne16)
