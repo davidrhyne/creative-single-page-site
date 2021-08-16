@@ -29,12 +29,15 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![desktop](https://user-images.githubusercontent.com/63062052/129579868-43c9b982-bf81-4d4c-8846-0f83a6169af7.png)
+![mobile](https://user-images.githubusercontent.com/63062052/129579545-55d910bf-447e-468e-bacb-32a8f35f052e.png)
+![mobile](https://user-images.githubusercontent.com/63062052/129579660-c1462d0c-9494-4f7c-b6eb-5bcc09a4c4cd.png)
+
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [@github](https://github.com/davidrhyne/creative-single-page-site)
+- Live Site URL: [@github pages](https://davidrhyne.github.io/creative-single-page-site/)
 
 ## My process
 
@@ -49,9 +52,11 @@ Users should be able to:
 
 ### What I learned
 
-The number 1 take away is how the format the HTML when there will be multiple overlapping elements within a grid.  Specifically, all the elements that will interact with each other need to be within the same grid.  Secondly, CSS grid uses a parent to child relationship.  Therefore, an element that will placed by the grid needs to be a child to the parent of the grid element.  The child element may be a div that contains other elements, but grid will only place that container div.  Grid will not be able to access any elements within the container div.
+The primary take away is how to structure the HTML when there will be multiple overlapping elements within a grid.  Specifically, all the interacting elements will need to be within the same grid.  Secondly, CSS grid uses a parent to child relationship.  Therefore, an element that will placed by the grid needs to be a child to the parent of the grid element.  The child element may be a div that contains other elements, but grid will only place that container div.  Grid will not be able to access any elements within the container div.
 
-Up until this project, I have found nature divisions within a website to wrap in their own section/div.  
+Up until this project, I have found nature divisions within a website to create distinct section's/div's. For this project, the design and services sections were combined to allow their elements to overlap when CSS grid was used for the tablet and desktop resolutions.  Likewise, sections for displaying the projects and navigating those projects (carousel) were combined into a single div to allow their elements to overlap as well.
+
+Going forward, I will be more aware of these overlapping elements and make sure to structure the HTML accordingly.
 
 ### Continued development
 
